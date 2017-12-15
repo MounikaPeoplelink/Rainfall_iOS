@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		145E1BE9CAA830788CF7FD84 /* Pods_RainfallUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E35944D5241C5FF5959D5E /* Pods_RainfallUITests.framework */; };
+		721AD370800CB5233B4FFB93 /* Pods_RainfallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958E5A17853183EDEB839766 /* Pods_RainfallTests.framework */; };
 		8FD2E9241FE27E1600113BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2E9231FE27E1600113BE0 /* AppDelegate.swift */; };
 		8FD2E9261FE27E1600113BE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2E9251FE27E1600113BE0 /* ViewController.swift */; };
 		8FD2E9291FE27E1600113BE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FD2E9271FE27E1600113BE0 /* Main.storyboard */; };
@@ -14,6 +16,16 @@
 		8FD2E92E1FE27E1600113BE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FD2E92C1FE27E1600113BE0 /* LaunchScreen.storyboard */; };
 		8FD2E9391FE27E1600113BE0 /* RainfallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2E9381FE27E1600113BE0 /* RainfallTests.swift */; };
 		8FD2E9441FE27E1600113BE0 /* RainfallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2E9431FE27E1600113BE0 /* RainfallUITests.swift */; };
+		8FD2E9521FE2886700113BE0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2E9511FE2886600113BE0 /* CardView.swift */; };
+		8FD2E9551FE3910400113BE0 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2E9531FE3910400113BE0 /* CalendarViewController.swift */; };
+		8FD2E9561FE3910400113BE0 /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD2E9541FE3910400113BE0 /* CalendarViewController.xib */; };
+		8FD2E9591FE3C4EA00113BE0 /* CalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2E9571FE3C4EA00113BE0 /* CalendarTableViewCell.swift */; };
+		8FD2E95A1FE3C4EA00113BE0 /* CalendarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD2E9581FE3C4EA00113BE0 /* CalendarTableViewCell.xib */; };
+		8FD2E95F1FE3CD5400113BE0 /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2E95E1FE3CD5400113BE0 /* CalendarHeaderView.swift */; };
+		8FD2E9611FE3CD7200113BE0 /* CalendarHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD2E9601FE3CD7200113BE0 /* CalendarHeaderView.xib */; };
+		8FD2E9641FE3DF0400113BE0 /* QuriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2E9621FE3DF0400113BE0 /* QuriesTableViewCell.swift */; };
+		8FD2E9651FE3DF0400113BE0 /* QuriesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FD2E9631FE3DF0400113BE0 /* QuriesTableViewCell.xib */; };
+		EB1828C6B178494DD2F36620 /* Pods_Rainfall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB714996D25EDFD5A1ABBE2D /* Pods_Rainfall.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0228DD622DE7D15A5AC164F3 /* Pods-RainfallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RainfallTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RainfallTests/Pods-RainfallTests.release.xcconfig"; sourceTree = "<group>"; };
+		37E35944D5241C5FF5959D5E /* Pods_RainfallUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RainfallUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		591FC504EB75EDDA1200C797 /* Pods-RainfallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RainfallTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RainfallTests/Pods-RainfallTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5E01DD6D23321D1B747440C7 /* Pods-Rainfall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rainfall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rainfall/Pods-Rainfall.debug.xcconfig"; sourceTree = "<group>"; };
 		8FD2E9201FE27E1600113BE0 /* Rainfall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rainfall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD2E9231FE27E1600113BE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FD2E9251FE27E1600113BE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +63,20 @@
 		8FD2E93F1FE27E1600113BE0 /* RainfallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainfallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD2E9431FE27E1600113BE0 /* RainfallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainfallUITests.swift; sourceTree = "<group>"; };
 		8FD2E9451FE27E1600113BE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FD2E9511FE2886600113BE0 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		8FD2E9531FE3910400113BE0 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		8FD2E9541FE3910400113BE0 /* CalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
+		8FD2E9571FE3C4EA00113BE0 /* CalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewCell.swift; sourceTree = "<group>"; };
+		8FD2E9581FE3C4EA00113BE0 /* CalendarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarTableViewCell.xib; sourceTree = "<group>"; };
+		8FD2E95E1FE3CD5400113BE0 /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
+		8FD2E9601FE3CD7200113BE0 /* CalendarHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarHeaderView.xib; sourceTree = "<group>"; };
+		8FD2E9621FE3DF0400113BE0 /* QuriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuriesTableViewCell.swift; sourceTree = "<group>"; };
+		8FD2E9631FE3DF0400113BE0 /* QuriesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuriesTableViewCell.xib; sourceTree = "<group>"; };
+		958E5A17853183EDEB839766 /* Pods_RainfallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RainfallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		968A714B910195C10718E97E /* Pods-Rainfall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rainfall.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rainfall/Pods-Rainfall.release.xcconfig"; sourceTree = "<group>"; };
+		BB714996D25EDFD5A1ABBE2D /* Pods_Rainfall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rainfall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D26F4D45ABF9870E2D410791 /* Pods-RainfallUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RainfallUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RainfallUITests/Pods-RainfallUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F924C80D889682F94677478D /* Pods-RainfallUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RainfallUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RainfallUITests/Pods-RainfallUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1828C6B178494DD2F36620 /* Pods_Rainfall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				721AD370800CB5233B4FFB93 /* Pods_RainfallTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +100,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				145E1BE9CAA830788CF7FD84 /* Pods_RainfallUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16CA6CE1E3128AFF9FDE2FD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E01DD6D23321D1B747440C7 /* Pods-Rainfall.debug.xcconfig */,
+				968A714B910195C10718E97E /* Pods-Rainfall.release.xcconfig */,
+				591FC504EB75EDDA1200C797 /* Pods-RainfallTests.debug.xcconfig */,
+				0228DD622DE7D15A5AC164F3 /* Pods-RainfallTests.release.xcconfig */,
+				F924C80D889682F94677478D /* Pods-RainfallUITests.debug.xcconfig */,
+				D26F4D45ABF9870E2D410791 /* Pods-RainfallUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8FD2E9171FE27E1600113BE0 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +127,8 @@
 				8FD2E9371FE27E1600113BE0 /* RainfallTests */,
 				8FD2E9421FE27E1600113BE0 /* RainfallUITests */,
 				8FD2E9211FE27E1600113BE0 /* Products */,
+				16CA6CE1E3128AFF9FDE2FD1 /* Pods */,
+				FBDA5E34678BC4E9DE708425 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +145,10 @@
 		8FD2E9221FE27E1600113BE0 /* Rainfall */ = {
 			isa = PBXGroup;
 			children = (
+				8FD2E95B1FE3C4F800113BE0 /* Calendar */,
 				8FD2E9231FE27E1600113BE0 /* AppDelegate.swift */,
 				8FD2E9251FE27E1600113BE0 /* ViewController.swift */,
+				8FD2E9511FE2886600113BE0 /* CardView.swift */,
 				8FD2E9271FE27E1600113BE0 /* Main.storyboard */,
 				8FD2E92A1FE27E1600113BE0 /* Assets.xcassets */,
 				8FD2E92C1FE27E1600113BE0 /* LaunchScreen.storyboard */,
@@ -125,6 +175,31 @@
 			path = RainfallUITests;
 			sourceTree = "<group>";
 		};
+		8FD2E95B1FE3C4F800113BE0 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				8FD2E9531FE3910400113BE0 /* CalendarViewController.swift */,
+				8FD2E9541FE3910400113BE0 /* CalendarViewController.xib */,
+				8FD2E9571FE3C4EA00113BE0 /* CalendarTableViewCell.swift */,
+				8FD2E9581FE3C4EA00113BE0 /* CalendarTableViewCell.xib */,
+				8FD2E9621FE3DF0400113BE0 /* QuriesTableViewCell.swift */,
+				8FD2E9631FE3DF0400113BE0 /* QuriesTableViewCell.xib */,
+				8FD2E95E1FE3CD5400113BE0 /* CalendarHeaderView.swift */,
+				8FD2E9601FE3CD7200113BE0 /* CalendarHeaderView.xib */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		FBDA5E34678BC4E9DE708425 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB714996D25EDFD5A1ABBE2D /* Pods_Rainfall.framework */,
+				958E5A17853183EDEB839766 /* Pods_RainfallTests.framework */,
+				37E35944D5241C5FF5959D5E /* Pods_RainfallUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FD2E9481FE27E1600113BE0 /* Build configuration list for PBXNativeTarget "Rainfall" */;
 			buildPhases = (
+				C167698AE592967E64BBE070 /* [CP] Check Pods Manifest.lock */,
 				8FD2E91C1FE27E1600113BE0 /* Sources */,
 				8FD2E91D1FE27E1600113BE0 /* Frameworks */,
 				8FD2E91E1FE27E1600113BE0 /* Resources */,
+				148763D3741312BA5B85F001 /* [CP] Embed Pods Frameworks */,
+				34B5AD624595A4194FA7024A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +227,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FD2E94B1FE27E1600113BE0 /* Build configuration list for PBXNativeTarget "RainfallTests" */;
 			buildPhases = (
+				0CEBC7F8D869150187AB5061 /* [CP] Check Pods Manifest.lock */,
 				8FD2E9301FE27E1600113BE0 /* Sources */,
 				8FD2E9311FE27E1600113BE0 /* Frameworks */,
 				8FD2E9321FE27E1600113BE0 /* Resources */,
+				0806BC0DBA60C287EB5970F7 /* [CP] Embed Pods Frameworks */,
+				4AEF5E4A6FB931538D017D9C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +248,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FD2E94E1FE27E1600113BE0 /* Build configuration list for PBXNativeTarget "RainfallUITests" */;
 			buildPhases = (
+				B31C8721B21BFAF0E90F90A3 /* [CP] Check Pods Manifest.lock */,
 				8FD2E93B1FE27E1600113BE0 /* Sources */,
 				8FD2E93C1FE27E1600113BE0 /* Frameworks */,
 				8FD2E93D1FE27E1600113BE0 /* Resources */,
+				EC7D77D3893A6E58B04EFC96 /* [CP] Embed Pods Frameworks */,
+				263CDAAE165822717F3A9B1E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,9 +316,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FD2E9561FE3910400113BE0 /* CalendarViewController.xib in Resources */,
 				8FD2E92E1FE27E1600113BE0 /* LaunchScreen.storyboard in Resources */,
+				8FD2E95A1FE3C4EA00113BE0 /* CalendarTableViewCell.xib in Resources */,
 				8FD2E92B1FE27E1600113BE0 /* Assets.xcassets in Resources */,
+				8FD2E9651FE3DF0400113BE0 /* QuriesTableViewCell.xib in Resources */,
 				8FD2E9291FE27E1600113BE0 /* Main.storyboard in Resources */,
+				8FD2E9611FE3CD7200113BE0 /* CalendarHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +342,169 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0806BC0DBA60C287EB5970F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RainfallTests/Pods-RainfallTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0CEBC7F8D869150187AB5061 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RainfallTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		148763D3741312BA5B85F001 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rainfall/Pods-Rainfall-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rainfall/Pods-Rainfall-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		263CDAAE165822717F3A9B1E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RainfallUITests/Pods-RainfallUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34B5AD624595A4194FA7024A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rainfall/Pods-Rainfall-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AEF5E4A6FB931538D017D9C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RainfallTests/Pods-RainfallTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B31C8721B21BFAF0E90F90A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RainfallUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C167698AE592967E64BBE070 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rainfall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC7D77D3893A6E58B04EFC96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RainfallUITests/Pods-RainfallUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8FD2E91C1FE27E1600113BE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FD2E9641FE3DF0400113BE0 /* QuriesTableViewCell.swift in Sources */,
+				8FD2E9551FE3910400113BE0 /* CalendarViewController.swift in Sources */,
+				8FD2E95F1FE3CD5400113BE0 /* CalendarHeaderView.swift in Sources */,
 				8FD2E9261FE27E1600113BE0 /* ViewController.swift in Sources */,
+				8FD2E9521FE2886700113BE0 /* CardView.swift in Sources */,
+				8FD2E9591FE3C4EA00113BE0 /* CalendarTableViewCell.swift in Sources */,
 				8FD2E9241FE27E1600113BE0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +669,7 @@
 		};
 		8FD2E9491FE27E1600113BE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E01DD6D23321D1B747440C7 /* Pods-Rainfall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +685,7 @@
 		};
 		8FD2E94A1FE27E1600113BE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 968A714B910195C10718E97E /* Pods-Rainfall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +701,7 @@
 		};
 		8FD2E94C1FE27E1600113BE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 591FC504EB75EDDA1200C797 /* Pods-RainfallTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +719,7 @@
 		};
 		8FD2E94D1FE27E1600113BE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0228DD622DE7D15A5AC164F3 /* Pods-RainfallTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +737,7 @@
 		};
 		8FD2E94F1FE27E1600113BE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F924C80D889682F94677478D /* Pods-RainfallUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +754,7 @@
 		};
 		8FD2E9501FE27E1600113BE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D26F4D45ABF9870E2D410791 /* Pods-RainfallUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
