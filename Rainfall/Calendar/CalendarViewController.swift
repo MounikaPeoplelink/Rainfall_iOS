@@ -33,19 +33,14 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     self.navigationController?.popViewController(animated: true)
     }
     @IBAction func calendarScopeAction(sender: UIButton) {
-        if sender.isSelected {
-
-            sender.isSelected = false
+        if calendarView.scope == .week {
             calendarView.scope = .month
             calendarViewHeightConstraint.constant = 220
         } else {
-            sender.isSelected = true
             calendarView.scope = .week
             calendarViewHeightConstraint.constant = 120
-            
             calendarView.setCurrentPage(calendarView.selectedDate ?? Date(), animated: true)
         }
-        
     }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
     
