@@ -32,8 +32,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tableViewQueries.estimatedRowHeight = 80
         self.tableViewQueries.rowHeight = UITableViewAutomaticDimension
         tableViewQueries.register(UINib(nibName: "QuriesTableViewCell", bundle: nil), forCellReuseIdentifier: "QuriesTableViewCell")
+        self.tableViewQueries.isScrollEnabled = false
         tableViewQueries.contentInsetAdjustmentBehavior = .automatic
-       // tableViewQueries.isScrollEnabled  = false
+    }
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
     @objc func handleTap(recognizer: UITapGestureRecognizer) {
         let calendarVC = CalendarViewController(nibName: "CalendarViewController", bundle: nil)
@@ -80,6 +83,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 var frame = self.queriesView.frame
                 frame.origin.y = self.upcomingView.frame.maxY + 15
                 self.queriesView.frame =  frame
+                self.tableViewQueries.isScrollEnabled = false
+
             })
         } else {
             sender.isSelected = true
@@ -87,6 +92,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 var frame = self.queriesView.frame
                 frame.origin.y = self.calendarView.frame.minY
                 self.queriesView.frame =  frame
+                self.tableViewQueries.isScrollEnabled = true
 
             })
             
