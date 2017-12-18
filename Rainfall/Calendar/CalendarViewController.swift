@@ -72,7 +72,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         return 40
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 77
+        return 76
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CalendarHeaderView") as! CalendarHeaderView
