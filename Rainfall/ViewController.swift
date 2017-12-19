@@ -78,8 +78,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if sender.isSelected {
             sender.isSelected = false
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
-                
+            
+            
+            UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+
                 var frame = self.queriesView.frame
                 frame.origin.y = self.upcomingView.frame.maxY + 15
                 self.queriesView.frame =  frame
@@ -88,7 +90,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             })
         } else {
             sender.isSelected = true
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
                 var frame = self.queriesView.frame
                 frame.origin.y = self.calendarView.frame.minY
                 self.queriesView.frame =  frame

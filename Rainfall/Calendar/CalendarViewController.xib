@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarViewController" customModule="Rainfall" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="6FE-RC-1UZ" id="BXb-u5-x7U"/>
                 <outlet property="calendarView" destination="ygU-Bc-e4y" id="sB9-SN-nyv"/>
                 <outlet property="calendarViewHeightConstraint" destination="LxM-Bo-Wyx" id="N5y-VT-Vow"/>
                 <outlet property="tableViewSchedules" destination="aGY-86-4TE" id="cra-75-D4A"/>
@@ -70,20 +71,20 @@
                         <outlet property="delegate" destination="-1" id="RHe-pm-BCs"/>
                     </connections>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FE-RC-1UZ">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FE-RC-1UZ">
                     <rect key="frame" x="10" y="30" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="JY3-0y-Spq"/>
                         <constraint firstAttribute="height" constant="20" id="dKZ-1b-v2H"/>
                     </constraints>
-                    <state key="normal" image="icon_back"/>
+                    <state key="normal" image="arrow_back"/>
                     <connections>
                         <action selector="backButtonActionWithSender:" destination="-1" eventType="touchUpInside" id="5bU-Qi-VtV"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPr-YP-P7v">
-                    <rect key="frame" x="150" y="50" width="20" height="22"/>
-                    <state key="normal" image="dropdown"/>
+                    <rect key="frame" x="148" y="50" width="24" height="24"/>
+                    <state key="normal" image="arrow_down"/>
                     <connections>
                         <action selector="calendarScopeActionWithSender:" destination="-1" eventType="touchUpInside" id="9GP-fg-VXT"/>
                     </connections>
@@ -121,7 +122,7 @@
         </view>
     </objects>
     <resources>
-        <image name="dropdown" width="20" height="20"/>
-        <image name="icon_back" width="36" height="36"/>
+        <image name="arrow_back" width="24" height="24"/>
+        <image name="arrow_down" width="24" height="24"/>
     </resources>
 </document>

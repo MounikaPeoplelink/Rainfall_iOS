@@ -12,6 +12,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     @IBOutlet weak var calendarView: FSCalendar!
     @IBOutlet weak var tableViewSchedules: UITableView!
     @IBOutlet weak var calendarViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var backButton: UIButton!
 
     var datesToMark = ["2017-12-15","2017-12-17","2017-12-22","2018-01-04"]
     override func viewDidLoad() {
@@ -36,10 +37,14 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         if calendarView.scope == .week {
             calendarView.scope = .month
             calendarViewHeightConstraint.constant = 220
+            backButton.isHidden = true
+
         } else {
             calendarView.scope = .week
             calendarViewHeightConstraint.constant = 120
             calendarView.setCurrentPage(calendarView.selectedDate ?? Date(), animated: true)
+            backButton.isHidden = false
+
         }
     }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
@@ -48,6 +53,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         calendarViewHeightConstraint.constant = 120
 
         calendarView.setCurrentPage(date, animated: true)
+        backButton.isHidden = false
     }
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
         let dateFormatter = DateFormatter()
