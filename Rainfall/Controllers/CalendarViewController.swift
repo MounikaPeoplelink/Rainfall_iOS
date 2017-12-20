@@ -8,11 +8,13 @@
 
 import UIKit
 import FSCalendar
+import MaterialComponents
 class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var calendarView: FSCalendar!
     @IBOutlet weak var tableViewSchedules: UITableView!
     @IBOutlet weak var calendarViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var backButton: UIButton!
+    let addRemainderBtn = MDCFloatingButton()
 
     var datesToMark = ["2017-12-15","2017-12-17","2017-12-22","2018-01-04"]
     override func viewDidLoad() {
@@ -23,8 +25,19 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         tableViewSchedules.register(UINib(nibName: "CalendarHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "CalendarHeaderView")
 
         tableViewSchedules.contentInsetAdjustmentBehavior = .automatic
+        view.addSubview(addRemainderBtn)
+        addRemainderBtn.translatesAutoresizingMaskIntoConstraints = false
+        addRemainderBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16.0).isActive = true
+        addRemainderBtn.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16.0).isActive = true
+        addRemainderBtn.backgroundColor = UIColor.init(red: 103/255, green: 58/255, blue: 183/255, alpha: 1)
+        addRemainderBtn.setTitle("+", for: .normal)
+        addRemainderBtn.setTitle("-", for: .selected)
+        addRemainderBtn.addTarget(self, action: #selector(self.fabDidTap(sender:)), for: .touchUpInside)
     }
-
+    @objc func fabDidTap(sender: UIButton) {
+        let remainderVC = RemainderViewController(nibName: "RemainderViewController", bundle: nil)
+        self.navigationController?.present(remainderVC, animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

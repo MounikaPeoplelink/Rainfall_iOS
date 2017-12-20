@@ -38,6 +38,10 @@
 		8FDBFBF31FE78F640050551B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FDBFBE61FE78F640050551B /* Roboto-Regular.ttf */; };
 		8FDBFBF41FE78F640050551B /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FDBFBE71FE78F640050551B /* Roboto-Thin.ttf */; };
 		8FDBFBF51FE78F640050551B /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FDBFBE81FE78F640050551B /* Roboto-ThinItalic.ttf */; };
+		8FDBFBFE1FEA1C4C0050551B /* RemainderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDBFBFC1FEA1C4C0050551B /* RemainderViewController.swift */; };
+		8FDBFBFF1FEA1C4C0050551B /* RemainderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FDBFBFD1FEA1C4C0050551B /* RemainderViewController.xib */; };
+		8FDBFC021FEA2A500050551B /* TFRemainderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDBFC001FEA2A500050551B /* TFRemainderTableViewCell.swift */; };
+		8FDBFC031FEA2A500050551B /* TFRemainderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FDBFC011FEA2A500050551B /* TFRemainderTableViewCell.xib */; };
 		EB1828C6B178494DD2F36620 /* Pods_Rainfall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB714996D25EDFD5A1ABBE2D /* Pods_Rainfall.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +102,10 @@
 		8FDBFBE61FE78F640050551B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		8FDBFBE71FE78F640050551B /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		8FDBFBE81FE78F640050551B /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		8FDBFBFC1FEA1C4C0050551B /* RemainderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemainderViewController.swift; sourceTree = "<group>"; };
+		8FDBFBFD1FEA1C4C0050551B /* RemainderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemainderViewController.xib; sourceTree = "<group>"; };
+		8FDBFC001FEA2A500050551B /* TFRemainderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFRemainderTableViewCell.swift; sourceTree = "<group>"; };
+		8FDBFC011FEA2A500050551B /* TFRemainderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TFRemainderTableViewCell.xib; sourceTree = "<group>"; };
 		958E5A17853183EDEB839766 /* Pods_RainfallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RainfallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		968A714B910195C10718E97E /* Pods-Rainfall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rainfall.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rainfall/Pods-Rainfall.release.xcconfig"; sourceTree = "<group>"; };
 		BB714996D25EDFD5A1ABBE2D /* Pods_Rainfall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rainfall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,15 +179,15 @@
 		8FD2E9221FE27E1600113BE0 /* Rainfall */ = {
 			isa = PBXGroup;
 			children = (
-				8FD2E95B1FE3C4F800113BE0 /* Calendar */,
+				8FDBFC071FEA64AE0050551B /* External */,
+				8FDBFC061FEA64980050551B /* CustomViews */,
+				8FDBFC041FEA64200050551B /* Controllers */,
+				8FD2E95B1FE3C4F800113BE0 /* CustomTableCells */,
 				8FD2E9231FE27E1600113BE0 /* AppDelegate.swift */,
-				8FD2E9251FE27E1600113BE0 /* ViewController.swift */,
-				8FD2E9511FE2886600113BE0 /* CardView.swift */,
 				8FD2E9271FE27E1600113BE0 /* Main.storyboard */,
 				8FD2E92A1FE27E1600113BE0 /* Assets.xcassets */,
 				8FD2E92C1FE27E1600113BE0 /* LaunchScreen.storyboard */,
 				8FD2E92F1FE27E1600113BE0 /* Info.plist */,
-				8FDBFBDB1FE78F640050551B /* Roboto */,
 			);
 			path = Rainfall;
 			sourceTree = "<group>";
@@ -202,19 +210,19 @@
 			path = RainfallUITests;
 			sourceTree = "<group>";
 		};
-		8FD2E95B1FE3C4F800113BE0 /* Calendar */ = {
+		8FD2E95B1FE3C4F800113BE0 /* CustomTableCells */ = {
 			isa = PBXGroup;
 			children = (
-				8FD2E9531FE3910400113BE0 /* CalendarViewController.swift */,
-				8FD2E9541FE3910400113BE0 /* CalendarViewController.xib */,
 				8FD2E9571FE3C4EA00113BE0 /* CalendarTableViewCell.swift */,
 				8FD2E9581FE3C4EA00113BE0 /* CalendarTableViewCell.xib */,
 				8FD2E9621FE3DF0400113BE0 /* QuriesTableViewCell.swift */,
 				8FD2E9631FE3DF0400113BE0 /* QuriesTableViewCell.xib */,
 				8FD2E95E1FE3CD5400113BE0 /* CalendarHeaderView.swift */,
 				8FD2E9601FE3CD7200113BE0 /* CalendarHeaderView.xib */,
+				8FDBFC001FEA2A500050551B /* TFRemainderTableViewCell.swift */,
+				8FDBFC011FEA2A500050551B /* TFRemainderTableViewCell.xib */,
 			);
-			path = Calendar;
+			path = CustomTableCells;
 			sourceTree = "<group>";
 		};
 		8FDBFBDB1FE78F640050551B /* Roboto */ = {
@@ -235,6 +243,34 @@
 				8FDBFBE81FE78F640050551B /* Roboto-ThinItalic.ttf */,
 			);
 			path = Roboto;
+			sourceTree = "<group>";
+		};
+		8FDBFC041FEA64200050551B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8FD2E9251FE27E1600113BE0 /* ViewController.swift */,
+				8FD2E9531FE3910400113BE0 /* CalendarViewController.swift */,
+				8FD2E9541FE3910400113BE0 /* CalendarViewController.xib */,
+				8FDBFBFC1FEA1C4C0050551B /* RemainderViewController.swift */,
+				8FDBFBFD1FEA1C4C0050551B /* RemainderViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8FDBFC061FEA64980050551B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				8FD2E9511FE2886600113BE0 /* CardView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		8FDBFC071FEA64AE0050551B /* External */ = {
+			isa = PBXGroup;
+			children = (
+				8FDBFBDB1FE78F640050551B /* Roboto */,
+			);
+			path = External;
 			sourceTree = "<group>";
 		};
 		FBDA5E34678BC4E9DE708425 /* Frameworks */ = {
@@ -369,6 +405,8 @@
 				8FD2E9561FE3910400113BE0 /* CalendarViewController.xib in Resources */,
 				8FD2E92E1FE27E1600113BE0 /* LaunchScreen.storyboard in Resources */,
 				8FDBFBF01FE78F640050551B /* Roboto-LightItalic.ttf in Resources */,
+				8FDBFBFF1FEA1C4C0050551B /* RemainderViewController.xib in Resources */,
+				8FDBFC031FEA2A500050551B /* TFRemainderTableViewCell.xib in Resources */,
 				8FD2E95A1FE3C4EA00113BE0 /* CalendarTableViewCell.xib in Resources */,
 				8FDBFBF31FE78F640050551B /* Roboto-Regular.ttf in Resources */,
 				8FD2E92B1FE27E1600113BE0 /* Assets.xcassets in Resources */,
@@ -445,11 +483,23 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rainfall/Pods-Rainfall-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -562,9 +612,11 @@
 				8FD2E9641FE3DF0400113BE0 /* QuriesTableViewCell.swift in Sources */,
 				8FD2E9551FE3910400113BE0 /* CalendarViewController.swift in Sources */,
 				8FD2E95F1FE3CD5400113BE0 /* CalendarHeaderView.swift in Sources */,
+				8FDBFC021FEA2A500050551B /* TFRemainderTableViewCell.swift in Sources */,
 				8FD2E9261FE27E1600113BE0 /* ViewController.swift in Sources */,
 				8FD2E9521FE2886700113BE0 /* CardView.swift in Sources */,
 				8FD2E9591FE3C4EA00113BE0 /* CalendarTableViewCell.swift in Sources */,
+				8FDBFBFE1FEA1C4C0050551B /* RemainderViewController.swift in Sources */,
 				8FD2E9241FE27E1600113BE0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

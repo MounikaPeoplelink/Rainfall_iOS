@@ -71,7 +71,7 @@
                         <outlet property="delegate" destination="-1" id="RHe-pm-BCs"/>
                     </connections>
                 </view>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FE-RC-1UZ">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FE-RC-1UZ">
                     <rect key="frame" x="10" y="30" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="JY3-0y-Spq"/>
