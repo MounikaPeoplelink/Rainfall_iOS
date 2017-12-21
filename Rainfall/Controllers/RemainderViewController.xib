@@ -17,6 +17,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RemainderViewController" customModule="Rainfall" customModuleProvider="target">
             <connections>
+                <outlet property="editOrSaveBtn" destination="JcZ-kR-PNu" id="gfj-C6-i8Z"/>
+                <outlet property="headerLbl" destination="pq5-Su-dRQ" id="RXh-yy-NYB"/>
                 <outlet property="tableViewRemainder" destination="xKi-iz-SUC" id="iwW-mF-QPI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -44,8 +46,11 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcZ-kR-PNu">
-                            <rect key="frame" x="252.5" y="7" width="63.5" height="30"/>
-                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
+                            <rect key="frame" x="260" y="7" width="50" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="grO-kL-gzM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                             <state key="normal" title="SAVE">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -63,10 +68,9 @@
                     <color key="backgroundColor" red="0.4039215686" green="0.2274509804" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="pq5-Su-dRQ" firstAttribute="centerY" secondItem="tHW-Zr-xKJ" secondAttribute="centerY" id="1zg-Fj-xYL"/>
-                        <constraint firstItem="JcZ-kR-PNu" firstAttribute="leading" secondItem="pq5-Su-dRQ" secondAttribute="trailing" constant="31" id="9X0-FQ-MfG"/>
                         <constraint firstItem="JcZ-kR-PNu" firstAttribute="top" secondItem="tHW-Zr-xKJ" secondAttribute="top" constant="7" id="Bu5-zY-jQu"/>
                         <constraint firstAttribute="height" constant="44" id="FiO-fY-JQ3"/>
-                        <constraint firstAttribute="trailing" secondItem="JcZ-kR-PNu" secondAttribute="trailing" constant="4" id="JKG-h6-YRn"/>
+                        <constraint firstAttribute="trailing" secondItem="JcZ-kR-PNu" secondAttribute="trailing" constant="10" id="JKG-h6-YRn"/>
                         <constraint firstItem="5SZ-he-Fcc" firstAttribute="top" secondItem="tHW-Zr-xKJ" secondAttribute="top" constant="12" id="KVe-dG-sUz"/>
                         <constraint firstItem="JcZ-kR-PNu" firstAttribute="centerY" secondItem="tHW-Zr-xKJ" secondAttribute="centerY" id="LVd-MW-dZ0"/>
                         <constraint firstItem="pq5-Su-dRQ" firstAttribute="centerX" secondItem="tHW-Zr-xKJ" secondAttribute="centerX" id="Pp9-zk-sIi"/>

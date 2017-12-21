@@ -15,6 +15,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     @IBOutlet weak var tableViewSchedules: UITableView!
     @IBOutlet weak var calendarViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var noDataLabel: UILabel!
     let addRemainderBtn = MDCFloatingButton()
     var remindersArray = [Reminder]()
     var remindersSections = [[Reminder]]()
@@ -38,6 +39,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         addRemainderBtn.setTitle("+", for: .normal)
         addRemainderBtn.setTitle("-", for: .selected)
         addRemainderBtn.addTarget(self, action: #selector(self.fabDidTap(sender:)), for: .touchUpInside)
+        filterReminderSections()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -47,6 +49,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         let remainderVC = RemainderViewController(nibName: "RemainderViewController", bundle: nil)
         remainderVC.delegate = self
         isEditReminder = false
+        remainderVC.isEditReminder = false
         self.navigationController?.present(remainderVC, animated: true, completion: nil)
     }
     override func didReceiveMemoryWarning() {
@@ -59,27 +62,28 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
     }
     @IBAction func calendarScopeAction(sender: UIButton) {
         if calendarView.scope == .week {
+           
             calendarView.scope = .month
-            calendarViewHeightConstraint.constant = 220
-            calendarView.appearance.headerMinimumDissolvedAlpha = 0.2
-            backButton.isHidden = true
-
+            self.calendarViewHeightConstraint.constant = 220
+            self.backButton.isHidden = true
+            self.calendarView.appearance.headerMinimumDissolvedAlpha = 0.2
         } else {
+            
             calendarView.scope = .week
-            calendarViewHeightConstraint.constant = 120
             calendarView.setCurrentPage(calendarView.selectedDate ?? Date(), animated: true)
-            calendarView.appearance.headerMinimumDissolvedAlpha = 0
-            backButton.isHidden = false
+            self.calendarViewHeightConstraint.constant = 120
+            self.backButton.isHidden = false
+            self.calendarView.appearance.headerMinimumDissolvedAlpha = 0
 
         }
     }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
     
         calendarView.scope = .week
-        calendarViewHeightConstraint.constant = 120
         calendarView.setCurrentPage(date, animated: true)
-        backButton.isHidden = false
-        calendarView.appearance.headerMinimumDissolvedAlpha = 0
+        self.calendarViewHeightConstraint.constant = 120
+        self.backButton.isHidden = false
+        self.calendarView.appearance.headerMinimumDissolvedAlpha = 0
 
     }
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
@@ -116,7 +120,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         cell.verticalLineSmall.alpha = 0.5
         let reminderObj = remindersSections[indexPath.section][indexPath.row]
         cell.titeLbl.text = reminderObj.title
-        cell.timestampLbl.text = "\(reminderObj.date), \(reminderObj.time)"
+        cell.timestampLbl.text = "\(reminderObj.date.components(separatedBy: ",")[0]), \(reminderObj.time)"
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -124,14 +128,14 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
         remainderVC.delegate = self
         isEditReminder = true
         editingIndex = indexPath.row
+        remainderVC.isEditReminder = true
         remainderVC.reminderObj = remindersArray[indexPath.row]
         self.navigationController?.present(remainderVC, animated: true, completion: nil)
     }
     func addReminderObj(reminderObj: Reminder) {
         isEditReminder ? (remindersArray[editingIndex] = reminderObj) : (remindersArray.append(reminderObj))
         filterReminderSections()
-        self.tableViewSchedules.reloadData()
-        calendarView.reloadData()
+        
     }
     func filterReminderSections(){
          datesToMark = [Date]()
@@ -150,6 +154,14 @@ class CalendarViewController: UIViewController, FSCalendarDelegate, FSCalendarDa
             reminders = remindersArray.filter{ $0.date == dateStr }
             remindersSections.append(reminders)
         }
+        showOrHideNoDataLabel()
+        self.tableViewSchedules.reloadData()
+        calendarView.reloadData()
+    }
+    
+    func showOrHideNoDataLabel(){
+        
+        noDataLabel.isHidden = remindersSections.count > 0 ? true : false
     }
 
     /*

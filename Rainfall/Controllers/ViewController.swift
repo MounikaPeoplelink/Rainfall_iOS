@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var swipeUpDownBtn: UIButton!
@@ -68,6 +69,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func callButtonAction(sender: UIButton){
+        let phoneNumber: String = "tel://8985080032"
+        if UIApplication.shared.canOpenURL(URL(string: phoneNumber)!) {
+            UIApplication.shared.open(URL(string: phoneNumber)!, options: [:], completionHandler: nil)
+        } else {
+            let alert = UIAlertController(title: "", message: "Unable to call", preferredStyle: UIAlertControllerStyle.alert)
+            let dismiss = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+            alert.addAction(dismiss)
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func emailButtonAction(sender: UIButton){
+        if MFMailComposeViewController.canSendMail() {
+            
+        let composeVC = MFMailComposeViewController()
+//        composeVC.mailComposeDelegate = self
+        // Configure the fields of the interface.
+        composeVC.setToRecipients(["address@example.com"])
+        composeVC.setSubject("Hello!")
+        composeVC.setMessageBody("Hello this is my message body!", isHTML: false)
+        // Present the view controller modally.
+        self.present(composeVC, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "", message: "Unable to send e-mail", preferredStyle: UIAlertControllerStyle.alert)
+            let dismiss = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+            alert.addAction(dismiss)
+            present(alert, animated: true, completion: nil)
+        }
     }
 
     @IBAction func upButtonAction(sender: UIButton){

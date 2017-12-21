@@ -9,12 +9,18 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarViewController" customModule="Rainfall" customModuleProvider="target">
             <connections>
                 <outlet property="backButton" destination="6FE-RC-1UZ" id="BXb-u5-x7U"/>
                 <outlet property="calendarView" destination="ygU-Bc-e4y" id="sB9-SN-nyv"/>
                 <outlet property="calendarViewHeightConstraint" destination="LxM-Bo-Wyx" id="N5y-VT-Vow"/>
+                <outlet property="noDataLabel" destination="0ca-qY-x0s" id="gTD-Ja-cQ9"/>
                 <outlet property="tableViewSchedules" destination="aGY-86-4TE" id="cra-75-D4A"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -100,6 +106,12 @@
                         <outlet property="delegate" destination="-1" id="5bS-xV-Kyz"/>
                     </connections>
                 </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Remainders Yet!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ca-qY-x0s">
+                    <rect key="frame" x="85" y="274" width="151" height="20"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -118,7 +130,9 @@
                 <constraint firstItem="TPr-YP-P7v" firstAttribute="top" secondItem="oFZ-Zn-w0r" secondAttribute="bottom" constant="30" id="XHd-3h-kKg"/>
                 <constraint firstItem="ygU-Bc-e4y" firstAttribute="top" secondItem="oFZ-Zn-w0r" secondAttribute="bottom" id="XmU-64-zd1"/>
                 <constraint firstItem="aGY-86-4TE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ecy-Ae-MNw"/>
+                <constraint firstItem="0ca-qY-x0s" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hSw-eI-HdM"/>
                 <constraint firstItem="oFZ-Zn-w0r" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="n3b-8f-dnG"/>
+                <constraint firstItem="0ca-qY-x0s" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xOk-0F-z8d"/>
                 <constraint firstItem="ygU-Bc-e4y" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="zut-wq-pKd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

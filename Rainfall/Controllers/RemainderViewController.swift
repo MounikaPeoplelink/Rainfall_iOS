@@ -12,6 +12,9 @@ protocol RemainderViewControllerDelegate {
 }
 class RemainderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableViewRemainder: UITableView!
+    @IBOutlet weak var editOrSaveBtn: UIButton!
+    @IBOutlet weak var headerLbl: UILabel!
+
     var delegate: RemainderViewControllerDelegate?
     var reminderObj = Reminder()
     var isEditReminder = false
@@ -20,6 +23,11 @@ class RemainderViewController: UIViewController, UITableViewDataSource, UITableV
         // Do any additional setup after loading the view.
         tableViewRemainder.register(UINib(nibName: "TFRemainderTableViewCell", bundle: nil), forCellReuseIdentifier: "TFRemainderTableViewCell")
         tableViewRemainder.contentInsetAdjustmentBehavior = .automatic
+        let btnTitle = isEditReminder ? "Edit" : "Save"
+        editOrSaveBtn.setTitle(btnTitle, for: .normal)
+        tableViewRemainder.separatorStyle = isEditReminder ? .none : .singleLine
+        tableViewRemainder.isUserInteractionEnabled = isEditReminder ? false : true
+        headerLbl.text = isEditReminder ? "Reminder": "Add Reminder"
 
     }
 
@@ -34,6 +42,13 @@ class RemainderViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     @IBAction func editOrSaveButtonAction(sender: UIButton) {
+        guard sender.titleLabel?.text == "Save" else {
+            editOrSaveBtn.setTitle("Save", for: .normal)
+            tableViewRemainder.separatorStyle = .singleLine
+            tableViewRemainder.isUserInteractionEnabled = true
+
+            return
+        }
 
         for i in 0...5 {
             if let cell = tableViewRemainder.cellForRow(at: IndexPath.init(row: i, section: 0)) as? TFRemainderTableViewCell {
