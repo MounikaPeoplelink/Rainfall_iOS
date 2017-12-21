@@ -6,8 +6,38 @@
 	<dict>
 		<key>Rainfall.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>19</integer>
+		</dict>
+		<key>RainfallTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
+		<key>RainfallUITests.xcscheme</key>
+		<dict>
 			<key>orderHint</key>
 			<integer>18</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>8FD2E91F1FE27E1600113BE0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FD2E9331FE27E1600113BE0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FD2E93E1FE27E1600113BE0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

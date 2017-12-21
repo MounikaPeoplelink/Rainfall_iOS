@@ -14,8 +14,6 @@ class TFRemainderTableViewCell: UITableViewCell {
 
     let imageNames = ["title", "date", "time", "call_gray", "email_gray", "addnote"]
     let placeholders = ["Remainder Title", "Date", "Time", "Phone Number", "E-mail", "Add note"]
-    var date = ""
-    var time = ""
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,9 +26,10 @@ class TFRemainderTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setContentForIndexpath(indexpath: IndexPath){
+    func setContentForIndexpath(indexpath: IndexPath, reminderObj: Reminder){
         self.textField.placeholder = placeholders[indexpath.row]
         self.imageVw.image = UIImage.init(named: imageNames[indexpath.row])
+        self.separatorInset = UIEdgeInsetsMake(0, 10, 0, 10)
         
         if indexpath.row == 1 || indexpath.row == 2 {
             let datePicker = UIDatePicker()
@@ -43,6 +42,29 @@ class TFRemainderTableViewCell: UITableViewCell {
             dateFormatter.dateFormat =  datePicker.tag == 1 ? "EEE dd MMM, yyyy" : "HH:mm"
             textField.text = dateFormatter.string(from: Date())
         }
+        switch indexpath.row {
+        case 0:
+            textField.text = reminderObj.title
+        case 1:
+            if !reminderObj.date.isEmpty {textField.text = reminderObj.date}
+
+        case 2:
+            if !reminderObj.time.isEmpty {textField.text = reminderObj.time}
+
+        case 3:
+            textField.text = reminderObj.mobile
+
+        case 4:
+            textField.text = reminderObj.email
+
+        case 5:
+            textField.text = reminderObj.addnote
+            
+        default:
+            break
+        }
+        
+        
     }
     @objc func onDatePickerValueChanged(picker: UIDatePicker) {
         let dateFormatter = DateFormatter()

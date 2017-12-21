@@ -7,10 +7,14 @@
 //
 
 import UIKit
-
+protocol RemainderViewControllerDelegate {
+    func addReminderObj(reminderObj: Reminder)
+}
 class RemainderViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableViewRemainder: UITableView!
-
+    var delegate: RemainderViewControllerDelegate?
+    var reminderObj = Reminder()
+    var isEditReminder = false
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,13 +34,31 @@ class RemainderViewController: UIViewController, UITableViewDataSource, UITableV
         
     }
     @IBAction func editOrSaveButtonAction(sender: UIButton) {
-        
+
         for i in 0...5 {
             if let cell = tableViewRemainder.cellForRow(at: IndexPath.init(row: i, section: 0)) as? TFRemainderTableViewCell {
-                print(cell.textField.text ?? "")
+                switch i {
+                    case 0:
+                        reminderObj.title = cell.textField.text ?? ""
+                    case 1:
+                        reminderObj.date = cell.textField.text ?? ""
+                    case 2:
+                        reminderObj.time = cell.textField.text ?? ""
+                    case 3:
+                        reminderObj.mobile = cell.textField.text ?? ""
+                    case 4:
+                        reminderObj.email = cell.textField.text ?? ""
+                    case 5:
+                        reminderObj.addnote = cell.textField.text ?? ""
+                    default:
+                    break
+                    
+                }
             }
         }
 
+        self.delegate?.addReminderObj(reminderObj: reminderObj)
+        dismiss(animated: true, completion: nil)
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
@@ -46,7 +68,7 @@ class RemainderViewController: UIViewController, UITableViewDataSource, UITableV
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TFRemainderTableViewCell", for: indexPath) as! TFRemainderTableViewCell
-        cell.setContentForIndexpath(indexpath: indexPath)
+        cell.setContentForIndexpath(indexpath: indexPath, reminderObj: reminderObj)
 
         return cell
     }

@@ -42,6 +42,7 @@
 		8FDBFBFF1FEA1C4C0050551B /* RemainderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FDBFBFD1FEA1C4C0050551B /* RemainderViewController.xib */; };
 		8FDBFC021FEA2A500050551B /* TFRemainderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDBFC001FEA2A500050551B /* TFRemainderTableViewCell.swift */; };
 		8FDBFC031FEA2A500050551B /* TFRemainderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FDBFC011FEA2A500050551B /* TFRemainderTableViewCell.xib */; };
+		8FDBFC0A1FEA7DD50050551B /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDBFC091FEA7DD50050551B /* Reminder.swift */; };
 		EB1828C6B178494DD2F36620 /* Pods_Rainfall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB714996D25EDFD5A1ABBE2D /* Pods_Rainfall.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		8FDBFBFD1FEA1C4C0050551B /* RemainderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RemainderViewController.xib; sourceTree = "<group>"; };
 		8FDBFC001FEA2A500050551B /* TFRemainderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFRemainderTableViewCell.swift; sourceTree = "<group>"; };
 		8FDBFC011FEA2A500050551B /* TFRemainderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TFRemainderTableViewCell.xib; sourceTree = "<group>"; };
+		8FDBFC091FEA7DD50050551B /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		958E5A17853183EDEB839766 /* Pods_RainfallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RainfallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		968A714B910195C10718E97E /* Pods-Rainfall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rainfall.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rainfall/Pods-Rainfall.release.xcconfig"; sourceTree = "<group>"; };
 		BB714996D25EDFD5A1ABBE2D /* Pods_Rainfall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rainfall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,6 +181,7 @@
 		8FD2E9221FE27E1600113BE0 /* Rainfall */ = {
 			isa = PBXGroup;
 			children = (
+				8FDBFC081FEA7DA60050551B /* Models */,
 				8FDBFC071FEA64AE0050551B /* External */,
 				8FDBFC061FEA64980050551B /* CustomViews */,
 				8FDBFC041FEA64200050551B /* Controllers */,
@@ -271,6 +274,14 @@
 				8FDBFBDB1FE78F640050551B /* Roboto */,
 			);
 			path = External;
+			sourceTree = "<group>";
+		};
+		8FDBFC081FEA7DA60050551B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8FDBFC091FEA7DD50050551B /* Reminder.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FBDA5E34678BC4E9DE708425 /* Frameworks */ = {
@@ -618,6 +629,7 @@
 				8FD2E9591FE3C4EA00113BE0 /* CalendarTableViewCell.swift in Sources */,
 				8FDBFBFE1FEA1C4C0050551B /* RemainderViewController.swift in Sources */,
 				8FD2E9241FE27E1600113BE0 /* AppDelegate.swift in Sources */,
+				8FDBFC0A1FEA7DD50050551B /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

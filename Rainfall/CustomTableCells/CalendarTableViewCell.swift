@@ -11,6 +11,8 @@ import UIKit
 class CalendarTableViewCell: UITableViewCell {
     @IBOutlet weak var verticalLineBig: UILabel!
     @IBOutlet weak var verticalLineSmall: UILabel!
+    @IBOutlet weak var titeLbl: UILabel!
+    @IBOutlet weak var timestampLbl: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

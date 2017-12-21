@@ -9,6 +9,7 @@
 import UIKit
 
 class CalendarHeaderView: UITableViewHeaderFooterView {
+    @IBOutlet weak var headerLbl: UILabel!
 
     /*
     // Only override draw() if you perform custom drawing.
