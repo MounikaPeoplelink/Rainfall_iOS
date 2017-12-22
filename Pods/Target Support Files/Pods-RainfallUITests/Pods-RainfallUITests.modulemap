@@ -1,0 +1,6 @@
+framework module Pods_RainfallUITests {
+  umbrella header "Pods-RainfallUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
