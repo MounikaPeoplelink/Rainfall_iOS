@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var upcomingView: UIView!
     @IBOutlet weak var queriesView: UIView!
     @IBOutlet weak var tableViewQueries: UITableView!
+    @IBOutlet weak var mainScrollView: UIScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,18 +114,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
 
-                var frame = self.queriesView.frame
-                frame.origin.y = self.upcomingView.frame.maxY + 15
-                self.queriesView.frame =  frame
+                self.mainScrollView.contentOffset = CGPoint.zero
                 self.tableViewQueries.isScrollEnabled = false
 
             })
         } else {
             sender.isSelected = true
             UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
-                var frame = self.queriesView.frame
-                frame.origin.y = self.calendarView.frame.minY
-                self.queriesView.frame =  frame
+                
+                self.mainScrollView.contentOffset = CGPoint(x: 0, y: self.upcomingView.frame.maxY)
                 self.tableViewQueries.isScrollEnabled = true
 
             })
